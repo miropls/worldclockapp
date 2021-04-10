@@ -1,33 +1,33 @@
 import { useState, useEffect } from "react";
 
 const Clock = () => {
-const clk = new Date();
-let timezone = "Helsinki (UTC +3, EEST)";
-let hour = clk.getHours().toString();
-let min = clk.getMinutes().toString();
-let sec = clk.getSeconds().toString();
+    const clk = new Date();
+    let timezone = "Helsinki (UTC +3, EEST)";
+    let hour = clk.getHours().toString();
+    let min = clk.getMinutes().toString();
+    let sec = clk.getSeconds().toString();
 
-if(hour.length <= 1) {
-    hour = `0${hour}`;
-} else {
-    hour = clk.getHours();
-}
+    if(hour.length <= 1) {
+        hour = `0${hour}`;
+    } else {
+        hour = clk.getHours();
+    }
 
-if(min.length <= 1) {
-    min = `0${min}`;
-} else {
-    min = clk.getMinutes();
-}
+    if(min.length <= 1) {
+        min = `0${min}`;
+    } else {
+        min = clk.getMinutes();
+    }
 
-if(sec.length <= 1) {
-    sec = `0${sec}`;
-} else {
-    sec = clk.getSeconds();
-}
-  
-const aika = `${hour}:${min}:${sec}`;
+    if(sec.length <= 1) {
+        sec = `0${sec}`;
+    } else {
+        sec = clk.getSeconds();
+    }
+    
+    const aika = `${hour}:${min}:${sec}`;
 
-const [time, setTime] = useState(clk.getDate())
+    const [time, setTime] = useState(clk.getDate())
 
     useEffect(() => {
         const interval = setInterval(() => {
